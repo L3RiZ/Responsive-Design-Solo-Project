@@ -8,3 +8,27 @@ html {
     margin: 0;
     padding: 0;
 }
+
+/* TYPOGRAPHIE */
+
+/* HEADER */
+
+.nav-container {
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-container {
+    width: 50%;
+}
+
+img {
+    
+}
+
+nav {
+    width: 50%;
+}
