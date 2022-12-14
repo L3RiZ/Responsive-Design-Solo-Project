@@ -1,6 +1,7 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%;
+    font-family: Roboto, sans serif;
 }
 
 *, *:before, *:after {
@@ -11,24 +12,145 @@ html {
 
 /* TYPOGRAPHIE */
 
-/* HEADER */
-
-.nav-container {
-    background-color: #FFFFFF;
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: space-between;
+.sct-date,
+h2,
+.sct-text {
+    color: #FFFFFF;
 }
 
-.logo-container {
+.sct-date,
+nav a {
+    font-size: 1.2rem;
+}
+
+h4, 
+.footer-txt {
+    color: #ECECEC;
+    font-size: 1.2rem;
+}
+
+h1 {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 3.2rem;
+    padding-top: 0.25em;
+}
+
+h3 {
+    font-size: 2.4rem;
+    padding-top: 0.33em;
+}
+
+nav a {
+    font-weight: 600;
+}
+
+.sct-date {
+    padding-top: 0.67em;
+}
+
+.sct-text {
+    font-size: 1.6rem;
+    padding-top: 0.5em;
+}
+
+.article-date {
+    font-size: 1.4rem;
+    padding-top: 1em;
+
+}
+
+.article-text {
+    font-size: 1.6rem;
+    padding: 0.5em 0;
+}
+
+.view-more a {
+    font-size: 1.6rem;
+    text-decoration: underline;
+}
+
+/* HEADER */
+
+header, .nav-container, .image-container, nav ul {
+    display: flex;
+}
+
+.nav-container {
+    width: 100%;
+    height: 60px;
+    align-items: center;
+}
+
+.image-container, nav {
     width: 50%;
+}
+
+.image-container {
+    padding: 2em;
 }
 
 img {
-    
+    padding-right: 0.5em;
+    display: block;
+    object-fit: scale-down;
 }
 
-nav {
-    width: 50%;
+nav ul {
+    justify-content: flex-end;
+}
+
+nav li {
+    list-style-type: none;
+    padding: 2em 2.5em 2em 0;
+}
+
+nav a {
+    display: block;
+    color: #090909;
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus {
+    color: blue;
+}
+
+/* MAIN */
+
+section {
+    background-image: url(/images/article-image-hero.png);
+    padding: 8em 2em 2.5em 2em;
+}
+
+article {
+    width: 90%;
+}
+
+article, .article-img {
+    display: block; 
+    margin: auto;
+}
+
+.article-img {
+    padding-top: 3.4em;
+}
+
+.view-more {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 2.7em;
+    padding-top: 1.7em;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #202020;
+    text-align: center;
+    padding-top: 4em;
+    padding-bottom: 4em;
 }
