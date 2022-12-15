@@ -56,6 +56,7 @@ nav a {
 .sct-text {
     font-size: 1.6rem;
     padding-top: 0.5em;
+    width: 60%;
 }
 
 .article-date {
@@ -186,23 +187,29 @@ footer {
         font-size: 2rem;
     }
 
+    main {
+        width: 100%;
+    }
+
     section {
         height: 100vh;
         display: flex;
         justify-content: flex-end;
         flex-direction: column;
-        padding: 0 50em 10em 0;
+        padding: 0 0 10em 2em;
     }
 
     .article-container {
+        overflow:auto;
         width: 100%;
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        grid-gap: 2em;
-        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 
     article {
         width: 100%;
+        max-width: 300px;
+        padding: 0 2em;
     }
 }
