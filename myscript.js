@@ -1,6 +1,6 @@
 const viewMoreBtn = document.getElementById("view-more");
 const articleCnt = document.getElementById("article-container");
-const newArticles = document.getElementById("test");
+const newArticles = document.getElementsByClassName("hidden");
 const images = ["images/blog-image-01.png", "images/blog-image-03.png", "images/blog-image-05.png"];
 const articleNumber = ["four", "five", "six"]
 
@@ -10,7 +10,7 @@ function generateArticles (){
     let text = "";
     for (let i = 0; i < images.length; i++) {
         text = `
-            <article class="hidden" id="test">
+            <article class="hidden" id="${articleNumber[i]}">
                 <img src="${images[i]}" alt="ARTICLE STOCK IMAGE" class="article-img">
                 <p class="article-date">JULY 23, 2022</p>
                 <h3>Blog ${articleNumber[i]}</h3>
@@ -21,7 +21,9 @@ function generateArticles (){
 }
 
 function addMoreContent () {
-    newArticles.classList.toggle("hidden");
+    for (let i = 0; i < articleNumber.length; i++) {
+        document.getElementById(articleNumber[i]).classList.toggle("hidden");
+    }
     changeButton()
 }
 
@@ -32,3 +34,5 @@ function changeButton() {
         viewMoreBtn.innerHTML = "View More";
     }
 }
+
+generateArticles();
